@@ -216,32 +216,123 @@ console.log('should log "m":', resultLastCharacter2);
 //Notes: When using Index make sure to use []
 //--------------------------------------------------------------------------------------------
 
+//Using the substring Method
+    //If you want to grab a portion of a string you can use the .substring() method.
 
+//Exercise
+    //We are going to complete a function that takes in three parameters (string,start,end ->
+    //where start and end are numerical indexes), and returns a portion of the string from before
+    //start, up to, but not including, end. Your function should create a subString variable and
+    //assign it to a call of the substring() method on the string, starting from before start, up to
+    //,but not including, end, and return the subString variable. Below are examples of the code running,
+    //assuming that you will have completed the described funtion: applySubString.
+
+function applySubString(string, start, end){
+    // create a subString variable
+    var subString;
+    // assign it to a portion of the string from before start, up to, but not including end
+    var subString = string.substring(start,end);
+    // return the subString variable
+    return subString;
+}
+    var string1 = 'Queue';
+    var resultSubString1 = applySubString(string1, 1, 4);
+    console.log('should log "ueu":', resultSubString1);
+
+    var string2 = 'Stack Trace';
+    var resultSubString2 = applySubString(string2, 2, 10);
+    console.log('should log "ack Trac":', resultSubString2);
 //--------------------------------------------------------------------------------------------
+
+//Using the indexOf Method
+    //If you want to determine where in a string we can find a particular substring you can 
+    //use .indexOf() method for string
+
+//Exercise 
+    //We are going to complete a function that takes in two parameters (string, subString),
+    //and returns the index of the string where the subString can be found. Your function
+    //should create an index variable and assign it to a call of the indexOf() method on
+    //the string, and passing subString as an argument, and return the index variable.
+    //Below are examples of the code running, assuming that you will have completed the
+    //described function: applyIndexOf.
+
+function applyIndexOf(string, subString){
+    // create an index variable
+    var index;
+    // assign it to the index inside of string where subString can first be found
+    var index = string.indexOf(subString);
+    // return the index variable
+    return index;
+}
+
+var string1 = 'Quicksort';
+var subString1 = 'sort';
+var resultIndex1 = applyIndexOf(string1, subString1);
+console.log('should log 5:', resultIndex1);
+
+var string2 = 'size,color,cut,price';
+var subString2 = 'cut';
+var resultIndex2 = applyIndexOf(string2, subString2);
+console.log('should log 11:', resultIndex2);
 //--------------------------------------------------------------------------------------------
+
+//Using the toString Method
+    //If you want to convert a value, other than a string, into a string use the .toString()
+    //method
+
+//Exercise
+    //We are going to complete a function that takes in one parameter, and returns a string
+    //version of that parameter. Your function should create a stringVersion variable and 
+    //assign it to a call of the toString() method on the input parameter, and return the 
+    //stringVersion variable. Below are examples of the code running, assuming that you will
+    //have completed the described function: applyToString.
+
+function applyToString(param){
+    // create a stringVersion variable
+    var stringVersion;
+    // assign it to the string version of the input param
+    var stringVersion = param.toString();
+    // return the stringVersion variable
+    return stringVersion;
+}
+
+var input1 = 9374;
+var resultString1 = applyToString(input1);
+console.log('should log "9374":', resultString1);
+console.log('type should be "string":', typeof resultString);
+
+var input2 = false;
+var resultString2 = applyToString(input2);
+console.log('should log "false":', resultString2);
+console.log('type should be "string":', typeof resultString2);
 //--------------------------------------------------------------------------------------------
+
+//Escape Characters
+    //An escape character is a character which invokes an alternative interpretation of subsequent
+    //characters in a character sequence
+
+//Exercise
+    //We are going to complete a function that takes in three string parameters (the first,
+    //second, and third lines of a haiku), and returns a string that when logged to the console
+    //outputs the haiku in traditional format - see example above. Your function should create
+    //a haiku variable and assign it to an expression which will create one "printable onto three
+    //lines" string out of the three input strings, and return the haiku variable. Below are
+    //examples of the code running, assuming that you will have completed the described function:
+    //generateHaiku.
+
+function generateHaiku(firstLine, secondLine, thirdLine){
+    // create a haiku variable
+    var haiku;
+    // assign it to an expression involving the input lines, such that they format correct when the return value is logged to the console
+    var haiku = firstLine + '\n' + secondLine + '\n' + thirdLine;
+    // return the haiku variable
+    return haiku;
+}
+
+var resultHaiku1 = generateHaiku('In the twilight rain', 'these brilliant-hued hibiscus -', 'A lovely sunset.');
+console.log('should log formatted haiku:\n', resultHaiku1);
+
+var resultHaiku2 = generateHaiku('The lamp once out', 'Moves west, flowers\' shadows', 'Creep eastward.');
+console.log('should also log formatted haiku:\n',  resultHaiku2);
 //--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
+
