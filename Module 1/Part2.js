@@ -467,14 +467,162 @@ console.log(person.fullName); // --> 'Jade Smith'
     var output = getElementsAfter (['a', 'b', 'c', 'd', 'e'], 2);
     console.log(output); // --> ['d', 'e']
 
+    // Exercise 3 - getElementsUpTo
+    /*
+    Write a function called "getElementsUpTo".
+    Given an array and a index, "getElementsUpTo", returns an array with all the
+    elements up until, but not including, the elements at the given index.
+    Notes:
+    In order to do this you should be familiar with the 'slice' method.
+    */
 
+    function getElementsUpTo(array, n){
+        var cutElement = array.splice(0,n);
+        return cutElement;
+    }
     
+    var output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3)
+    console.log(output); // --> ['a', 'b', 'c']
 // --------------------------------------------------------------------------------------------
+
+
+// Array Methods 4
+
+    // Exercise 1 - getAllElementsButFirst
+    /*
+    Write a function called "getAllElementsButFirst".
+    Given an array, "getAllElementsButFirst" returns an array with all the elements
+    but the first.
+    */
+
+    function getAllElementsButFirst(array){
+        var cutElement = array.splice(1)
+    }
+
+    var input = [1, 2, 3, 4];
+    var output = getAllElementsButFirst(input);
+    console.log(output); // --> [2, 3, 4]
+
+    // Exercise 2 - getAllElementsButLast
+    /*
+    Write a function called "getAllElementsButLast".
+    Given an array, "getAllElementsButLast" returns an array with all the elements
+    but the last.
+    */
+
+    function getAllElementsButLast(array){
+        var arrayLength = (array.length - 1);
+        var cutElement = array.splice(0, arrayLength);
+        return cutElement;
+    }
+
+    var input = [1, 2, 3, 4];
+    var output = getAllElementsButLast(input);
+    console.log(output); // --> [1, 2, 3]
+
+    // Exercise 3 - removeFromFront
+    /*
+    Write a function called "removeFromFront".
+    Given an array, "removeFromFront" returns the given array with its first element
+    removed.
+    Notes:
+    You should be familiar with the method 'shift'.
+    */
+
+    function removeFromFront(arr){
+        // remove the first element from the array
+        var removeElement = arr.shift(0)
+        // return the array with missing first element
+        return arr
+    }
+
+    var output = removeFromFront([1, 2, 3]);
+    console.log(output); // --> [2, 3]
 // --------------------------------------------------------------------------------------------
+
+// Array Methods 6
+
+    // Exercise 1 - removeFromBack
+    /*
+    Write a function called "removeFromtBack".
+    Given an array, "removeFromBack" returns the given array with its last element
+    removed.
+    Notes:
+    You should be familiar with the method 'pop'.
+    */
+
+    function removeFromBack(arr){
+        // remove the last element from the array
+        var removeElement = arr.pop();
+        // return the array with the missing last element
+        return arr;
+    }
+
+    var output = removeFromBack([1, 2, 3]);
+    console.log(output); // --> [1, 2]
 // --------------------------------------------------------------------------------------------
+
+// Array Methods 5
+
+    // Exercise 1 - removeFromBackOfNew
+    /*
+    Write a function called "removeFromBackOfNew".
+    Given an array, "removeFromBackOfNew" returns a new array containing all but
+    the last element of the given array.
+    Notes: 
+    You should be familiar with the 'slice' method.
+    */
+
+    function removeFromBackOfNew(arr){
+        // get the length of the array and subtract one to get the last index
+        var lengthArray = arr.length - 1
+        // use slice to copy the array, minus the last element
+        var newArray = arr.slice(0,lengthArray);
+        return newArray
+    }
+
+    var arr = [1, 2, 3];
+    var output = removeFromBackOfNew(arr);
+    console.log(output); // --> [1, 2]
+    console.log(arr); // --> [1, 2, 3]
+
+    // Exercise 2 - removeFromFrontOfNew
+    /*
+    Write a function called "removeFromFrontOfNew".
+    Given an array, "removeFromFrontOfNew" returns a new array containing all but
+    the first element of the given array.
+    Notes:
+    You should be familiar with the 'slice' method.
+    */
+
+    function removeFromFrontOfNew(arr){
+        var newArray = arr.slice(1);
+        return newArray;
+    }
+
+    var arr = [1, 2, 3];
+    var output = removeFromFrontOfNew(arr);
+    console.log(output); // --> [2, 3]
+    console.log(arr); // --> [1, 2, 3]
+
+    // Exercise 3 - countCharacter
+    /*
+    Write a function called "countCharacter".
+    Given a string input and a character, "countCharacter" returns the number of
+    occurrences of a given character in the given string.
+    */
+
+    function countCharacter(str, char){
+        var count = 0;
+        for(var i = 0; i < str.length; i++){
+            if(str[i] === char){
+                count++
+            }
+        }
+        return count
+    }
+
+    var output = countCharacter('I am a hacker', 'a');
+    console.log(output); // --> 3
 // --------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------
+
