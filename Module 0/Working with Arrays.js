@@ -476,7 +476,7 @@ console.log('should also log joined string:', resultString2);
 
 // Exercise
     /*
-    We are going to comletea function that takes in two string parameters (stringToBeSplit, Splitter),
+    We are going to comlete a function that takes in two string parameters (stringToBeSplit, Splitter),
     and returns an array that is the result of splittingthe stringToBeSplit parameter on the splitter
     parameter. Your function should create a splitString variable and assign it to a call to the .split()
     method, and return the splitString variable. Below are examples of the code running, assuming that you
