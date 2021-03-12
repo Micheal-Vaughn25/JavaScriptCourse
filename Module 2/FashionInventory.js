@@ -314,7 +314,7 @@ function generateLaceDetails(inventory){
 }
 
 function shoeIncludesLace(shoeArray){
-    var shoeName = showArray.name;
+    var shoeName = shoeArray.name;
     if(shoeName.indexOf('lace') !== -1){
         return true;
     } else {
