@@ -197,3 +197,62 @@ Test.assertEquals(iqTest("2 4 7 8 10"),3);
 Test.assertEquals(iqTest("1 2 2"), 1);
 //-----------------------------------------------------------------------------------------
 
+/*
+Complete the solution so that it splits the string into pairs of two
+characters. If the string contains an odd number of characters then
+it should replace the missing second character of the final pair with
+an underscore(_).
+
+Example:
+solution('abc') // should return ['ab', 'c_']
+solution('abcdef') // should return ['ab', 'cd', 'ef']
+
+
+Steps to solve problem
+---------------------------
+input - string
+output - an array of two character strings
+declare result array
+iterate over the string
+  split the text up in chunks of two characters
+    if the string is an odd number of characters, return an underscore with the last character
+return the result array
+
+Notes - 
+I ran into problems when trying to add the _ to the end of the string. I received feedback and adjusted code as needed
+
+
+*/
+
+function solution(str){
+  var result = [];
+  var finalChar = (str.length)
+  console.log(finalChar)
+  if(finalChar % 2 >= 1){
+    str = (str + '_')
+  }
+  console.log(str)
+  for(var i = 0; i < str.length; i++){
+    if(i === 0){
+      result.push(str[i] + str[i+1])
+    } else if(i % 2 === 0){
+      result.push(str[i] + str[i+1])
+    } 
+  }
+  return result;
+}
+
+
+
+
+const { assert } = require('chai');
+
+describe("Split Strings", () => {
+  it("Basic tests", () => {
+    assert.deepEqual(solution("abcdef"), ["ab", "cd", "ef"]);
+    assert.deepEqual(solution("abcdefg"), ["ab", "cd", "ef", "g_"]);
+    assert.deepEqual(solution(""), []);
+  });
+});
+
+// -----------------------------------------------------------------------------------------------------
